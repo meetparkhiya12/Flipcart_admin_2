@@ -43,9 +43,9 @@ function Home() {
         <Table striped bordered hover>
           <thead>
             <tr>
-              <th>Image</th>
-              <th>Title</th>
-              <th>Category</th>
+              <th className='th1'>Image</th>
+              <th >Title</th>
+              <th className='th2'>Category</th>
 
               <th>price</th>
               <th>Action</th>
@@ -58,13 +58,13 @@ function Home() {
         
                 return (
                   <tr>
-                    <td>
-                      <div style={{width:"100px", height:"100px"}}>
+                    <td className='th1'>
+                      <div style={{width:"100px", height:"100px"}} >
                         <img src={data.image} alt="" style={{width:"100%", height:"100%",objectFit:"cover"}} />
                       </div>
                     </td>
                     <td>{data.title}</td>
-                    <td>{data.category}</td>
+                    <td className='th2'>{data.category}</td>
 
                     <td>{data.price}</td>
                     <td><button className='btn btn-danger me-3' onClick={() => handleRemove(data.id)}>Remove</button><button className='btn btn-primary' onClick={() => handleEdit(data.id)}>Edit</button>
